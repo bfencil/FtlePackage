@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-def RK4_advection_2d(velocity_points, velocity_vectors, trajectories, fine_time, time_independent):
+def RK4_advection_2d(velocity_points, velocity_vectors, trajectories, dt, fine_time, time_independent):
 
     if time_independent:
         interp_u = LinearNDInterpolator(velocity_points, velocity_vectors[:, 0], fill_value=0)
